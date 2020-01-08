@@ -2,12 +2,14 @@ from django.contrib import admin
 from .models import *
 
 
-class TidingAdmin(admin.ModelAdmin):
+class AchievementAdmin(admin.ModelAdmin):
     list_display = ['name', 'title', 'created']
 
     class Meta:
-        model = Tiding
+        model = Achievement
 
 
-admin.site.register(Tiding, TidingAdmin)
+admin.site.register(Achievement, AchievementAdmin)
+admin.site.register(Picture)
+
 # Register your models here.

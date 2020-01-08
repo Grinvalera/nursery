@@ -1,13 +1,13 @@
 from django.contrib import admin
-from .models import *
+from .models import Title
 
 
-class TidingAdmin(admin.ModelAdmin):
+class TitleAdmin(admin.ModelAdmin):
     list_display = ['name', 'title', 'created']
 
     class Meta:
-        model = Tiding
+        model = Title
 
 
-admin.site.register(Tiding, TidingAdmin)
+admin.site.register(Title, TitleAdmin)
 # Register your models here.
