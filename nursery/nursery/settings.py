@@ -25,7 +25,7 @@ SECRET_KEY = '785&03&_p9rmxryk%ely25mjcr_5(dnbac!utlgb5%vatn70di'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['33598018.ngrok.io']
+ALLOWED_HOSTS = ['aa6fd978.ngrok.io']
 
 
 # Application definition
@@ -56,10 +56,12 @@ MIDDLEWARE = [
 
 ROOT_URLCONF = 'nursery.urls'
 
+TEMPLATE_DIR = os.path.join(BASE_DIR, 'templates')
+
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [TEMPLATE_DIR],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
