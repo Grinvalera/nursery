@@ -18,7 +18,7 @@ from . import views
 
 
 urlpatterns = [
-    path('', views.test, name='test'),
+    path('', views.home, name='home'),
     path('animals/', include('animals.urls')),
     path('contact/', include('contact.urls')),
     path('news/', include('news.urls')),
