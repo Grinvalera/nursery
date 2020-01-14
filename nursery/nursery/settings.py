@@ -25,7 +25,7 @@ SECRET_KEY = '785&03&_p9rmxryk%ely25mjcr_5(dnbac!utlgb5%vatn70di'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['e23243ed.ngrok.io']
+ALLOWED_HOSTS = ['b1d967b3.ngrok.io']
 
 
 # Application definition
@@ -73,6 +73,11 @@ TEMPLATES = [
         },
     },
 ]
+
+STATICFILES_DIRS = (
+    os.path.join(BASE_DIR, "static"),
+    '/home/valeriy/PycharmProjects/nursery/nursery/static',
+)
 
 WSGI_APPLICATION = 'nursery.wsgi.application'
 

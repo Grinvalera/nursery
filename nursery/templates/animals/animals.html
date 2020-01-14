@@ -5,6 +5,16 @@
     <title>Title</title>
 </head>
 <body>
-    <p1>Sonya lapochka'</p1>
+<p>Heello</p>
+{% for i in peep %}
+<tr class='success'>
+    <td>{{i.id}}</td>
+    <td>{{i.name}}</td>
+    <td>{{i.description}}</td>
+    <td>{{i.create}}</td>
+    <td>{{i.update}}</td>
+
+</tr>
+{%endfor%}
 </body>
 </html>
