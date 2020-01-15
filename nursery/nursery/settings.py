@@ -25,7 +25,7 @@ SECRET_KEY = '785&03&_p9rmxryk%ely25mjcr_5(dnbac!utlgb5%vatn70di'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['b1d967b3.ngrok.io']
+ALLOWED_HOSTS = ['72e40dcd.ngrok.io']
 
 
 # Application definition
@@ -92,6 +92,8 @@ DATABASES = {
     }
 }
 
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')
+MEDIA_URL = '/media/'
 
 # Password validation
 # https://docs.djangoproject.com/en/3.0/ref/settings/#auth-password-validators

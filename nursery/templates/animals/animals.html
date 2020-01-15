@@ -2,19 +2,16 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Наши собаки</title>
 </head>
 <body>
-<p>Heello</p>
-{% for i in peep %}
+{% for i in all %}
 <tr class='success'>
-    <td>{{i.id}}</td>
-    <td>{{i.name}}</td>
-    <td>{{i.description}}</td>
-    <td>{{i.create}}</td>
-    <td>{{i.update}}</td>
-
+    <p>{{i.name}}</p>
+    <img src="{{ i.picture.url }}", height="300", width="500">
+    <p>{{i.description}}</p>
+    <p>{{i.create}}</p>
 </tr>
-{%endfor%}
+{% endfor %}
 </body>
 </html>

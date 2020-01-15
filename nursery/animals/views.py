@@ -5,8 +5,9 @@ from .models import Description
 
 
 def animals(request):
-    peep = Description.objects.all()
+    all = Description.objects.all()
     return render(request, 'animals/animals.html', locals())
+
 
 
 # class DescriptionView(ListView):
