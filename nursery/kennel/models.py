@@ -12,4 +12,15 @@ class Title(models.Model):
 
     class Meta:
         verbose_name = 'Описание питомника'
-# Create your models here.
+
+
+class PictureCarousel(models.Model):
+    picture = models.ImageField(upload_to='carousel_image/')
+
+    def __str__(self):
+        return f'{self.id}'
+
+    class Meta:
+        verbose_name = 'Картинка для карусели'
+        verbose_name_plural = 'Картинки для карусели'
+

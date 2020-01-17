@@ -1,7 +1,10 @@
 from django.shortcuts import render
 from django.http import HttpResponse
 
+from .models import PictureCarousel
+
 
 def home(request):
-    return render(request, 'nursery/index.html')
+    all = PictureCarousel.objects.all()
+    return render(request, 'news/news.html', locals())
 # Create your views here.

@@ -1,10 +1,24 @@
 <!DOCTYPE html>
-<html lang="en">
+{% load static %}
+<html xmlns="http://www.w3.org/1999/xhtml"  lang=" ">
 <head>
-    <meta charset="UTF-8">
-    <title>Title</title>
+	<title>Демо-страница</title>
+	<link rel="stylesheet" type="text/css" href="{% static 'news.css' %}"/>
+	<SCRIPT type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></SCRIPT>
+	<script type="text/javascript" src="{% static 'news.js' %}"></script>
 </head>
 <body>
-    <h1>Vrode vce norm!</h1>
+	<div class="slider">
+		<div class="next"></div>
+		<div class="prev"></div>
+        <div class = 'slides'>
+		{% for i in all %}
+            <div class="slide">
+                    <img src="{{ i.picture.url }}" >
+            </div>
+
+        {% endfor %}
+        </div>
+	</div>
 </body>
 </html>
