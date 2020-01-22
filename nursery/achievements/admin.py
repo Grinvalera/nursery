@@ -12,4 +12,5 @@ class AchievementAdmin(admin.ModelAdmin):
 admin.site.register(Achievement, AchievementAdmin)
 admin.site.register(Picture)
 
+
 # Register your models here.

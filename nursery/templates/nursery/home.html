@@ -1,10 +1,53 @@
 <!DOCTYPE html>
-<html lang="en">
+{% load static %}
 <head>
-    <meta charset="UTF-8">
-    <title>$Title$</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <title>Главная страница</title>
+	<link rel="stylesheet" type="text/css" href="{% static 'home.css' %}"/>
+	<script type="text/javascript" src="{% static 'news.js' %}"></script>
 </head>
 <body>
-$END$
+<div class="text">Классный питомник</div>
+<div class="home-demo">
+  <div class="owl-carousel owl-theme">
+    {% for i in carousel %}
+        <div class="slide">
+            <img src="{{ i.picture.url }}" >
+        </div>
+    {% endfor %}
+  </div>
+</div>
+<nav class="container">
+    <ul>
+      <li class="nav-item"><a href="{%url 'home'%}" class="nav-link">Главная</a></li>
+      <li class="nav-item"><a href="{%url 'animals'%}" class="nav-link">Собаки</a></li>
+      <li class="nav-item"><a href="{%url 'contact'%}" class="nav-link">Контакты</a></li>
+      <li class="nav-item"><a href="{%url 'news'%}" class="nav-link">Новости</a></li>
+      <li class="nav-item"><a href="{%url 'achievements'%}" class="nav-link">Достижения</a></li>
+    </ul>
+  </nav>
+<div class = "nursery">
+<div class="left_side_image">
+    {% for i in left_side %}
+        <tr>
+            <td><img src="{{ i.left_image.url }}", height="500", width="400"><br></td>
+        </tr>
+    {% endfor %}
+</div>
+<div class="right_side_image">
+    {% for a in right_side %}
+        <tr>
+            <td><img src="{{ a.right_image.url }}", height="500", width="400"><br></td>
+        </tr>
+    {% endfor %}
+</div>
+    {% for i in nursery %}
+        <li class="href"><a href="{%url 'home'%}" class="href-link">{{ i.name }}</a>
+        <p>{{i.title}}</p>
+    {% endfor %}
+</div>
 </body>
 </html>

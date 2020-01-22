@@ -14,6 +14,28 @@ class Title(models.Model):
         verbose_name = 'Описание питомника'
 
 
+class LeftPictureSide(models.Model):
+    left_image = models.ImageField(upload_to='side_image/')
+
+    def __str__(self):
+        return f'{self.id}'
+
+    class Meta:
+        verbose_name = 'Левая боковая картинка'
+        verbose_name_plural = 'Левые боковые картинки'
+
+
+class RightPictureSide(models.Model):
+    right_image = models.ImageField(upload_to='side_image/')
+
+    def __str__(self):
+        return f'{self.id}'
+
+    class Meta:
+        verbose_name = 'Правая боковая картинка'
+        verbose_name_plural = 'Правые боковые картинки'
+
+
 class PictureCarousel(models.Model):
     picture = models.ImageField(upload_to='carousel_image/')
 

@@ -2,7 +2,7 @@ body{
   background-color: #5f7681;
 }
 .container {
-  margin: 100px auto;
+  background-color: #8c9da5;
   height: auto;
   width: auto;
   text-align: center;
@@ -44,8 +44,49 @@ body{
 }
 
 .animals{
-    width: 600px;
+    width: 900px;
     text-align: center;
     background-color: #8c9da5;
     margin: 0 auto;
+}
+
+.slide{
+	display: block;
+	text-align: center;
+	width: auto;
+	height: auto;
+    margin: auto;
+}
+
+.text{
+  font-style: italic;
+  text-shadow: 4px 3px 0px #fff, 9px 8px 0px rgba(0,0,0,0.15);
+  text-align: center;
+  height: 150px;
+  width: auto;
+  color: black;
+  font-size: 100px;
+  background-color: #8c9da5;
+}
+
+.nursery{
+    width: auto;
+    text-align: center;
+    background-color: #8c9da5;
+    margin: 0 auto;
+}
+
+.href-link{
+    text-align: left;
+    color: blue;
+}
+
+.left_side_image{
+    float: left;
+    text-align: left;
+}
+
+.right_side_image{
+    float: right;
+    text-align: right;
 }
