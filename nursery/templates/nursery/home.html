@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 {% load static %}
 <head>
+    <link href="https://fonts.googleapis.com/css?family=Corben" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Nobile" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
@@ -10,12 +12,12 @@
 	<script type="text/javascript" src="{% static 'news.js' %}"></script>
 </head>
 <body>
-<div class="text">Классный питомник</div>
+<div class="text"><h1>Праздник Солнечного Света</h1></div>
 <div class="home-demo">
   <div class="owl-carousel owl-theme">
     {% for i in carousel %}
         <div class="slide">
-            <img src="{{ i.picture.url }}" >
+            <img src="{{ i.picture.url }}">
         </div>
     {% endfor %}
   </div>
@@ -33,19 +35,19 @@
 <div class="left_side_image">
     {% for i in left_side %}
         <tr>
-            <td><img src="{{ i.left_image.url }}", height="500", width="400"><br></td>
+            <td><img src="{{ i.left_image.url }}", height="550", width="450"><br></td>
         </tr>
     {% endfor %}
 </div>
 <div class="right_side_image">
     {% for a in right_side %}
         <tr>
-            <td><img src="{{ a.right_image.url }}", height="500", width="400"><br></td>
+            <td><img src="{{ a.right_image.url }}", height="550", width="450"><br></td>
         </tr>
     {% endfor %}
 </div>
     {% for i in nursery %}
-        <li class="href"><a href="{%url 'home'%}" class="href-link">{{ i.name }}</a>
+        <h1>{{ i.name }}</h1>
         <p>{{i.title}}</p>
     {% endfor %}
 </div>
