@@ -19,4 +19,5 @@ from . import views
 
 urlpatterns = [
     path('', views.animals, name='animals'),
+    path('1/', views.our_animals, name='our_animals')
 ]

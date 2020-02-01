@@ -8,6 +8,42 @@ body{
   text-align: center;
 }
 
+.our_animals_text{
+    text-align: center;
+    font-size: 15px;
+}
+
+.images_animals{
+    float: left;
+    text-align: center;
+    padding: 20px; /* Ширина паспарту */
+    background: #8c9da5; /* Цвет фона  паспарту */
+    border: 10px solid #666;
+}
+
+.text-animals{
+    font-size: 20px;
+    font-family: 'Corben', Georgia, Times, serif;
+    width: 1300px;
+    height: 1000px;
+    text-align: left;
+    background-color: #8c9da5;
+    margin: 0 auto;
+}
+
+.our_animals_images {
+    float: left; /* Выравнивание по правому краю */
+    border: 1px solid #333; /* Параметры рамки */
+    padding: 7px; /* Поля внутри блока */
+    margin: 10px 0 5px 5px; /* Отступы вокруг */
+    background: #5f7681;
+}
+
+.our_animals_images figcaption{
+    text-align: center;
+    margin: 0 auto 5px;
+}
+
 .nav-item {
   padding: 3px;
   background: rgba(0, 0, 0, 0.01);
@@ -83,21 +119,21 @@ body{
 }
 
 .text {
-  background: #8c9da5;
-  padding: 50px 20px;
-  text-align: center;
+    background: #8c9da5;
+    padding: 50px 20px;
+    text-align: center;
 }
 .text h1 {
-  font-family: 'Merriweather', serif;
-  position: relative;
-  color: #FCF2E5;
-  background: #90806A;
-  font-size: 85px;
-  font-weight: normal;
-  padding: 10px 40px;
-  display: inline-block;
-  margin: 0;
-  line-height: 1;
+    font-family: 'Merriweather', serif;
+    position: relative;
+    color: #FCF2E5;
+    background: #90806A;
+    font-size: 85px;
+    font-weight: normal;
+    padding: 10px 40px;
+    display: inline-block;
+    margin: 0;
+    line-height: 1;
 }
 .text h1:before {
   content: "";

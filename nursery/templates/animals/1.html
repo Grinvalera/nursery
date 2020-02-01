@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="{% static 'test.css' %}">
+    <link rel="stylesheet" href="{% static 'highslide.css' %}">
+
+    <script type="text/javascript" src="{% static 'highslide.js' %}"></script>
+    <script type="text/javascript" src="{% static 'test.js' %}"></script>
+
+    <script type="text/javascript">
+
+    </script>
+
+</head>
+<body>
+<div class="wrap">
+    <div class="karkas">
+        <a href="{% static 'thumbstrip01.jpg' %}" class="highslide" onclick="return hs.expand(this)">
+            <img src="{% static 'thumbstrip01.thumb.png' %}" title="1">
+        </a>
+
+    </div>
+</div>
+<img src="{% static 'thumbstrip01.jpg' %}">
+</body>
+</html>

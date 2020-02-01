@@ -46,3 +46,4 @@ class PictureCarousel(models.Model):
         verbose_name = 'Картинка для карусели'
         verbose_name_plural = 'Картинки для карусели'
 
+

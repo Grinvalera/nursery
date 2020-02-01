@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Title, PictureCarousel, LeftPictureSide, RightPictureSide
+from .models import Title, PictureCarousel, RightPictureSide, LeftPictureSide
 
 
 class TitleAdmin(admin.ModelAdmin):
@@ -9,18 +9,18 @@ class TitleAdmin(admin.ModelAdmin):
         model = Title
 
 
-class PictureCarouselAdmin(admin.ModelAdmin):
-    list_display = ['picture']
-
-    class Meta:
-        model = PictureCarousel
-
-
 class LeftPictureSideAdmin(admin.ModelAdmin):
     list_display = ['left_image']
 
     class Meta:
         model = LeftPictureSide
+
+
+class PictureCarouselAdmin(admin.ModelAdmin):
+    list_display = ['picture']
+
+    class Meta:
+        model = PictureCarousel
 
 
 class RightPictureSideAdmin(admin.ModelAdmin):

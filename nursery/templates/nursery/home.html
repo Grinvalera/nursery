@@ -7,9 +7,14 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
-    <title>Главная страница</title>
+    <title>Праздник Солнечного Света</title>
 	<link rel="stylesheet" type="text/css" href="{% static 'home.css' %}"/>
+    <link rel="stylesheet" href="{% static 'test.css' %}">
+    <link rel="stylesheet" href="{% static 'highslide.css' %}">
+
 	<script type="text/javascript" src="{% static 'news.js' %}"></script>
+    <script type="text/javascript" src="{% static 'highslide.js' %}"></script>
+    <script type="text/javascript" src="{% static 'test.js' %}"></script>
 </head>
 <body>
 <div class="text"><h1>Праздник Солнечного Света</h1></div>
@@ -25,25 +30,25 @@
 <nav class="container">
     <ul>
       <li class="nav-item"><a href="{%url 'home'%}" class="nav-link">Главная</a></li>
-      <li class="nav-item"><a href="{%url 'animals'%}" class="nav-link">Собаки</a></li>
-      <li class="nav-item"><a href="{%url 'contact'%}" class="nav-link">Контакты</a></li>
       <li class="nav-item"><a href="{%url 'news'%}" class="nav-link">Новости</a></li>
-      <li class="nav-item"><a href="{%url 'achievements'%}" class="nav-link">Достижения</a></li>
+      <li class="nav-item"><a href="{%url 'animals'%}" class="nav-link">Собаки</a></li>
+      <li class="nav-item"><a href="{%url 'achievements'%}" class="nav-link">Достяжения</a></li>
+      <li class="nav-item"><a href="{%url 'contact'%}" class="nav-link">Контакты</a></li>
     </ul>
   </nav>
 <div class = "nursery">
 <div class="left_side_image">
     {% for i in left_side %}
-        <tr>
-            <td><img src="{{ i.left_image.url }}", height="550", width="450"><br></td>
-        </tr>
+       <a href="{{ i.left_image.url }}" class="highslide" onclick="return hs.expand(this)">
+            <img src="{{ i.left_image.url }}", height="801", width="450"><br>
+       </a>
     {% endfor %}
 </div>
 <div class="right_side_image">
     {% for a in right_side %}
-        <tr>
-            <td><img src="{{ a.right_image.url }}", height="550", width="450"><br></td>
-        </tr>
+        <a href="{{ a.right_image.url }}" class="highslide" onclick="return hs.expand(this)">
+            <img src="{{ a.right_image.url }}", height="801", width="450"><br>
+        </a>
     {% endfor %}
 </div>
     {% for i in nursery %}

@@ -1,11 +1,11 @@
 from django.shortcuts import render
 from django.http import HttpResponse
 
-from .models import PictureCarousel, Title, LeftPictureSide, RightPictureSide
+from .models import PictureCarousel, Title, RightPictureSide, LeftPictureSide
 
 
 def home(request):
-    left_side = LeftPictureSide.objects.all()
+    left_side = LeftPictureSide.objects.all
     right_side = RightPictureSide.objects.all
     nursery = Title.objects.all()
     carousel = PictureCarousel.objects.all()

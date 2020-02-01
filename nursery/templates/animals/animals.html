@@ -1,12 +1,25 @@
 {% extends 'base.html' %}
 {% block content %}
-<div class = 'animals'>
-{% for i in all %}
-<tr class='success'>
+{% for i in all_description %}
+<div class='text-animals'>
+<tr>
+    <div class="images_animals">
+    <img src="{{ i.picture.url }}", height="300", width="450">
+    </div>
     <h2><strong>{{i.name}}</strong></h2>
-    <img src="{{ i.picture.url }}", height="500", width="700">
     <p>{{i.description}}</p>
 </tr>
 {% endfor %}
+<div class="our_animals_text">
+    <h1>Наши щенки</h1>
+</div>
+<div class="our_animals">
+{% for i in all_our_animals %}
+<figure class="our_animals_images">
+    <img src="{{ i.picture.url }}", height="200", width="350">
+    <figcaption>{{ i.name }}</figcaption>
+</figure>
+{% endfor %}
+</div>
 </div>
 {% endblock content %}

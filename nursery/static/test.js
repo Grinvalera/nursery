@@ -1,0 +1,1 @@
+hs.graphicsDir = '/static/graphics/';

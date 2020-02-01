@@ -15,4 +15,15 @@ class Description(models.Model):
         verbose_name = 'Описание'
         verbose_name_plural = 'Описания'
 
+
+class OurAnimal(models.Model):
+    picture = models.ImageField(upload_to='our_animals/')
+    name = models.CharField(max_length=64)
+
+    def __str__(self):
+        return f'{self.name}'
+
+    class Meta:
+        verbose_name = 'Наш щенок'
+        verbose_name_plural = 'Наши щенки'
 # Create your models here.
