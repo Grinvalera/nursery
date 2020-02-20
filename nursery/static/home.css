@@ -32,6 +32,7 @@ body{
 }
 
 .our_animals_images {
+    text-align: center;
     float: left; /* Выравнивание по правому краю */
     border: 1px solid #333; /* Параметры рамки */
     padding: 7px; /* Поля внутри блока */

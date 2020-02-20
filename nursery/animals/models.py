@@ -19,6 +19,7 @@ class Description(models.Model):
 class OurAnimal(models.Model):
     picture = models.ImageField(upload_to='our_animals/')
     name = models.CharField(max_length=64)
+    title = models.TextField(blank=False, null=True)
 
     def __str__(self):
         return f'{self.name}'

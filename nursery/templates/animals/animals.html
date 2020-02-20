@@ -14,10 +14,10 @@
     <h1>Наши щенки</h1>
 </div>
 <div class="our_animals">
-{% for i in all_our_animals %}
+{% for post in all_our_animals %}
 <figure class="our_animals_images">
-    <img src="{{ i.picture.url }}", height="200", width="350">
-    <figcaption>{{ i.name }}</figcaption>
+    <img src="{{ post.picture.url }}", height="200", width="350">
+    <h1><a href="{% url 'our_animal' pk=post.pk %}">{{ post.name }}</a></h1>
 </figure>
 {% endfor %}
 </div>

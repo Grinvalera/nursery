@@ -13,8 +13,9 @@ Including another URLconf
     1. Import the include() function: from django.urls import include, path
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
-from django.urls import path, include
+from django.conf.urls import include, url
 from . import views
+from django.urls import path
 
 
 urlpatterns = [
@@ -22,5 +23,5 @@ urlpatterns = [
     path('animals/', include('animals.urls')),
     path('contact/', include('contact.urls')),
     path('news/', include('news.urls')),
-    path('achievements/', include('achievements.urls'))
+    path('achievements/', include('achievements.urls')),
 ]

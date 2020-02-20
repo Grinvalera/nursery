@@ -1,7 +1,15 @@
-from django.shortcuts import render
+from django.shortcuts import render, Http404, HttpResponse
 from django.views.generic.list import ListView
+from django.shortcuts import get_object_or_404
 
 from .models import Description, OurAnimal
+
+
+def our_animals(request, name):
+    test = OurAnimal.objects.all()
+    dog = get_object_or_404(OurAnimal, name=name)
+
+    return render(request, 'animals/1.html', locals())
 
 
 def animals(request):
@@ -10,8 +18,8 @@ def animals(request):
     return render(request, 'animals/animals.html', locals())
 
 
-def our_animals(request):
-    return render(request, 'animals/1.html', locals())
+def test_def(request):
+    return render(request, 'nursery/home.html', locals())
 
 
 # class DescriptionView(ListView):
